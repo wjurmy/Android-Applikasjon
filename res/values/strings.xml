@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Rozgar</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="action_example" translatable="false">Example action</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="labelAuthor" translatable="false">نویسنده: </string>
+    <string name="labelCreated" translatable="false">created</string>
+    
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="grey">#ff444444</color>
+    <color name="grey_light">#ffcccccc</color>
+    <color name="red">#ffff0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="titlebar_bg">#ff39599c</color>
+    <color name="items_bg">#ffdedfe7</color>
+    
+</resources>

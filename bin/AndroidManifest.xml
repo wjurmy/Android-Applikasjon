@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tigot.rozgar"
+    android:versionCode="10"
+    android:versionName="10.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/rozgarr"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="com.tigot.rozgar.app.RozgarApplication" >
+        <activity
+            android:name="com.tigot.rozgar.activity.CategoriesActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tigot.rozgar.activity.NewsItemActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+            </intent-filter>
+			<!-- <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.tigot.rozgar.activity.CategoriesActivity" /> -->
+        </activity>
+        
+        <service android:name="com.tigot.rozgar.service.DownloadCategoryService">
+            <intent-filter>
+                <action android:name="com.tigot.rozgar.service.DownloadCategoryService" >
+                </action>
+            </intent-filter>
+        </service>
+        <service android:name="com.tigot.rozgar.service.DownloadCategoryImagesService">
+            <intent-filter>
+                <action android:name="com.tigot.rozgar.service.DownloadCategoryImagesService" >
+                </action>
+            </intent-filter>
+        </service>
+        
+		<provider
+            android:name="com.tigot.rozgar.provider.DataProvider"
+            android:authorities="com.tigot.rozgarprovider" />
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,45 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tigot.rozgar.activity.CategoriesActivity" >
+
+    <!-- <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" > -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/categoryCont"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <FrameLayout
+            android:id="@+id/topCategoriesCont"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <fragment
+                android:id="@+id/topCategoriesFragment"
+                android:name="com.tigot.rozgar.activity.category.TopCategoriesFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <!-- </ScrollView> -->
+
+    <fragment
+        android:id="@+id/navigation_drawer"
+        android:name="com.tigot.rozgar.activity.category.NavigationCategoryFragment"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_category_list" />
+
+</android.support.v4.widget.DrawerLayout>
